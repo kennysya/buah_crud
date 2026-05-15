@@ -8,7 +8,12 @@ use App\Models\Buah;
 class BuahController extends Controller
 {
     public function index(){
-        //
+        //Menentukan judul halaman
+        $title = 'Data Buah';
+        //Mengambil semua data buah dari database
+        $buah = Buah::all();
+        //Mengambil view 'buah.index' dengan membawa data title dan buah
+        return view('buah.index', compact('title', 'buah'));
     }
     public function create(){
         //

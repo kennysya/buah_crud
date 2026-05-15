@@ -1,7 +1,6 @@
 <?php
-
+use App\Http\Controllers\BuahController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/buah', [BuahController::class,
+'index'])->name('buah.index');
