@@ -47,6 +47,9 @@ class BuahController extends Controller
         //
     }
     public function destroy(Buah $buah){
-        //
+        //Menghapus data buah yang dipilih
+        $buah->delete();
+        //Redirect ke halaman index dengan pesan sukses
+        return redirect()->route('buah.index')->with('success','Data Buah berhasil dihapus.');
     }
 }

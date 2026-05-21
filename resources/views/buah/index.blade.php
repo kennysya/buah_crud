@@ -22,7 +22,12 @@
             <td>{{ $data->kondisi_buah }}</td>
             <td>
                 <a href="#">Edit</a>
-                <button type="submit" onclick="return confirm('Hapus buah ini?')">Hapus</button>
+                <form action="{{ route('buah.destroy', $data->id) }}"
+                method="POST" style="display: inline;">
+                @csrf
+                @method('DELETE')
+                <button type="submit" onclick="return confirm('Hapus data buah ini?')">Hapus</button>
+            </form>
             </td>
         </tr>
         @endforeach
