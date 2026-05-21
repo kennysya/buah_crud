@@ -9,7 +9,7 @@
             <th>Jenis Buah</th>
             <th>Jumlah Buah</th>
             <th>Kondisi Buah</th>
-            <th><a href="#">Tambah Data </a></th>
+            <th><a href="{{ route('buah.create') }}">Tambah Data </a></th>
         </tr>
     </thead>
     <tbody>
